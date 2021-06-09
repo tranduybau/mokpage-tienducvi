@@ -28,10 +28,10 @@
     <nav class="navbar navbar-expand-lg navigation-bar navbar-light sticky-top nav-phone">
         <a class="navbar-brand" href="#">SpiltBills</a>
         <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbar-button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon collapse-button"></span>
         </button>
             <div class="collapse navbar-collapse collapse-menu" id="navbar-button">
-                <ul class="navbar-nav mr-auto"> <!-- left-side --> 
+                <ul class="navbar-nav mr-auto left-side"> <!-- left-side --> 
                     <li class="nav-item"> 
                     <a class="nav-link item1" href="#">How it works</a>
                     </li>
@@ -49,9 +49,11 @@
                     <li class="nav-item">
                         <a class="nav-link item5" href="#">Log in</a>
                     </li>
-                    <li class="nav-item line"></li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary item6" href="#">Sign up</a>
+                        <div class="line"></div>
+                    </li>
+                    <li class="nav-item btn btn-primary signup">
+                        <a class="nav-link item6" href="#">Sign up</a>
                     </li>
                 </ul>
             </div>
@@ -64,12 +66,32 @@
                 <h1>Transactions are increasingly<br>easy using <span class="big-title"><strong>SplitBills</strong></span></h1>
                 <h1 class="second-line">Easy to use, Simple to use & Easy to use</h1>
                 <div class="logo">
-                    <div class="btn btn-outline-default logo1">
-                        <img class="item-logo" src="img/google-play.png" alt="">
-                    </div>
-                    <div class="btn btn-outline-default logo2">
-                        <img class="item-logo" src="img/app-store.png" alt="">
-                    </div> 
+                    <button class="logo-button">
+                        <a href="" class="android">
+                            <img src="img/android.svg" alt="" class="img-logo">
+                            <div class="logo-title">
+                                <p class="small-title">
+                                    GET IT ON
+                                </p>
+                                <p class="big-title">
+                                    Google Play
+                                </p>
+                            </div>
+                        </a>
+                    </button>
+                    <button class="logo-button">
+                       <a href="" class="ios">
+                            <img src="img/ios.svg" alt="" class="img-logo">
+                            <div class="logo-title">
+                                <p class="small-title">
+                                    Download on the
+                                </p>
+                                <p class="big-title">
+                                    App Store
+                                </p>
+                            </div>
+                        </a> 
+                    </button>     
                 </div>
             </div>
         </div>
@@ -79,9 +101,9 @@
          <div class="container sponsor-item">
             <ul class="image-list">
                 <li><img class="responsive image1" src="img/madrin.svg" alt=""></li>
-                <li><img class="responsive image1" src="img/digit.svg" alt=""></li>
-                <li><img class="responsive image1" src="img/venox.svg" alt=""></li>
-                <li><img class="responsive image1" src="img/zing.svg" alt=""></li>
+                <li><img class="responsive image1 digit" src="img/digit.svg" alt=""></li>
+                <li><img class="responsive image1 venox" src="img/venox.svg" alt=""></li>
+                <li><img class="responsive image1 zing" src="img/zing.svg" alt=""></li>
             </ul>
         </div>   
     </div>  <!-- end sponsor -->       
@@ -133,7 +155,7 @@
     <!-- Promo -->
     <div class="promo">
         <div class="container promo-menu">
-           <h2 class="title">Promo</h2>
+           <h2 class="title promo-title">Promo</h2>
            <div class="promo-items">
                <div class="promo-item1"> <!-- item1 -->                  
                    <h4>Try to be Cahless<br>with<br><span class="underline-text"><strong>SplitBills</strong></span></h4>
@@ -153,38 +175,60 @@
     <!-- footer -->
     <div class="footer">
         <div class="container-fluid footer-menu">
-            <div class="learn-more">
-                <h5>Learn more</h5>
-                <a href="" class="footer-link">How it work</a>
-                <a href="" class="footer-link">Who we are</a>
-                <a href="" class="footer-link">Careers</a>
-                <a href="" class="footer-link">Blog</a>
-                <a href="" class="footer-link">FAQs</a>
-            </div>
-            <div class="social">
-                <h5>Social</h5>
-                <a href="" class="footer-link">Facebooks</a>
-                <a href="" class="footer-link">Instagram</a>
-                <a href="" class="footer-link">Twitter</a>
-                <a href="" class="footer-link">Pinterest</a>
-                <a href="" class="footer-link">Linkedlin</a>
-            </div>
-            <div class="subcribe">
+            <div class="learnMore-social">  <!-- learn-more and social div -->               
+                <div class="learn-more">
+                    <h5>Learn more</h5>
+                    <a href="" class="footer-link">How it work</a>
+                    <a href="" class="footer-link">Who we are</a>
+                    <a href="" class="footer-link">Careers</a>
+                    <a href="" class="footer-link">Blog</a>
+                    <a href="" class="footer-link">FAQs</a>
+                </div>
+                <div class="social">
+                    <h5>Social</h5>
+                    <a href="" class="footer-link">Facebooks</a>
+                    <a href="" class="footer-link">Instagram</a>
+                    <a href="" class="footer-link">Twitter</a>
+                    <a href="" class="footer-link">Pinterest</a>
+                    <a href="" class="footer-link">Linkedlin</a>
+                </div>
+            </div>         
+            <div class="subcribe">  <!-- subcribe -->               
                 <h5>Subcribe</h5>
                 <form>
                     <input type="text" placeholder="Email Address" name="email" id="email" required>
                     <button type="submit" class="btn btn-info registerbtn"><img class="arrow" src="img/line.svg" alt=""></button>
                 </form>
             </div>
-            <div class="download">
+            <div class="download">  <!-- download -->               
                 <h5>Download</h5>
-                <div class="download-button">
-                    <div class="btn btn-outline-default logo1">
-                        <img class="item-logo" src="img/google-play.png" alt="">
-                    </div>
-                    <div class="btn btn-outline-default logo2">
-                        <img class="item-logo" src="img/app-store.png" alt="">
-                    </div> 
+                <div class="logo logo-download">  <!-- download button -->                   
+                    <button class="logo-button">
+                        <a href="" class="android">
+                            <img src="img/android.svg" alt="" class="img-logo">
+                            <div class="logo-title">
+                                <p class="small-title">
+                                    GET IT ON
+                                </p>
+                                <p class="big-title">
+                                    Google Play
+                                </p>
+                            </div>
+                        </a>
+                    </button>
+                    <button class="logo-button">
+                       <a href="" class="ios">
+                            <img src="img/ios.svg" alt="" class="img-logo">
+                            <div class="logo-title">
+                                <p class="small-title">
+                                    Download on the
+                                </p>
+                                <p class="big-title">
+                                    App Store
+                                </p>
+                            </div>
+                        </a> 
+                    </button>     
                 </div>
             </div>
         </div>
